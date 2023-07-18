@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    
+</head>
+<body>
+    <h1>Submitted Data</h1>
+    <div>
+        {% for key, value in json_data.items() %}
+            <div>
+                <label>{{ key }}</label>
+                <b>
+                    <input type="text" value="{{ value }}" readonly>
+                </b>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
