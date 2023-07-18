@@ -1,18 +1,18 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Template Page</title>
+    <title>Result</title>
 </head>
 <body>
-  <h1>JSON Data:</h1>
- 
-   {% for key, value in json_data.items() %}
+    <h1>Submitted Data</h1>
+    <div>
+        <% for (const [key, value] of Object.entries(json_data)) { %>
             <div>
-                <label>{{ key }}</label>
+                <label><%= key %></label>
                 <b>
-                    <input type="text" value="{{ value }}" readonly>
+                    <input type="text" value="<%= value %>" readonly>
                 </b>
             </div>
-        {% endfor %}
+        <% } %>
+    </div>
 </body>
 </html>
