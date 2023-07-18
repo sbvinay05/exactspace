@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install the dependencies
 RUN npm install --production
 
+#install ejs
+RUN npm install ejs
+
 # Copy the application code
 COPY . .
 
