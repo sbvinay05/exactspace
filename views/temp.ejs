@@ -6,5 +6,13 @@
 <body>
   <h1>JSON Data:</h1>
   <pre><%= JSON.stringify(json_data, null, 2) %></pre>
+   {% for key, value in json_data.items() %}
+            <div>
+                <label>{{ key }}</label>
+                <b>
+                    <input type="text" value="{{ value }}" readonly>
+                </b>
+            </div>
+        {% endfor %}
 </body>
 </html>
